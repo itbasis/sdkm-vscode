@@ -30,8 +30,8 @@ export function getEnv(): void {
 
         var cfg = workspace.getConfiguration("go");
 
-        cfg.update("gopath", envMap.get('GOPATH'), ConfigurationTarget.WorkspaceFolder, true);
-        cfg.update("goroot", envMap.get('GOROOT'), ConfigurationTarget.WorkspaceFolder, true);
+        cfg.update("gopath", envMap.get('GOPATH'));
+        cfg.update("goroot", envMap.get('GOROOT'));
 
         console.debug(envMap);
     });
