@@ -12,6 +12,10 @@ When opening a Go project, paths will be calculated and written in `settings.jso
 
 Requires [SDKM](https://github.com/itbasis/sdkm) to be pre-installed and available in env.PATH
 
+## Install
+
+At the moment, installation is only via [vsix file](https://github.com/itbasis/sdkm-vscode/releases/latest)
+
 ## Release Notes
 
 see [ChangeLog](./CHANGELOG.md)
