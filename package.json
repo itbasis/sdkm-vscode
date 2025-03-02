@@ -3,7 +3,7 @@
   "displayName": "sdkm-vscode",
   "description": "sdkm support in VSCode",
   "version": "0.0.1",
-  "repository": "github:/itbasis/sdkm-vscode",
+  "repository": "https://github.com/itbasis/sdkm-vscode",
   "engines": {
     "vscode": "^1.97.0"
   },
