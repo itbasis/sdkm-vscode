@@ -2,24 +2,43 @@
   "name": "sdkm-vscode",
   "displayName": "sdkm-vscode",
   "description": "sdkm support in VSCode",
-  "version": "0.1.0",
-  "repository": "https://github.com/itbasis/sdkm-vscode",
+  "version": "0.1.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itbasis/sdkm-vscode"
+  },
+  "bugs": {
+    "url": "https://github.com/itbasis/sdkm-vscode/issues"
+  },
+  "license": "MIT",
   "engines": {
     "vscode": "^1.97.0"
   },
   "categories": [
+    "Programming Languages",
     "Other"
   ],
-  "activationEvents": [
-    "workspaceContains:go.mod"
+  "keywords": [
+    "sdkm",
+    "devtools",
+    "asdf",
+    "asdf-vm",
+    "mise",
+    "envs",
+    "environment variables",
+    "scripts"
   ],
   "main": "./dist/extension.js",
+  "activationEvents": [
+    "workspaceContains:go.mod",
+    "onLanguage:go"
+  ],
   "contributes": {
     "commands": [
       {
         "category": "sdkm",
-        "command": "sdkm-vscode.helloWorld",
-        "title": "Hello World"
+        "title": "calculate Go environment",
+        "command": "sdkm-vscode.updateGoSettings"
       }
     ]
   },
@@ -32,17 +51,20 @@
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "npm run compile-tests && npm run compile && npm run lint",
     "lint": "eslint src",
-    "test": "vscode-test"
+    "fix-lint": "gts fix src test",
+    "test": "vscode-test",
+    "update": "npm update --all --save",
+    "vsce-package": "vsce package"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.10",
-    "@types/node": "22.x",
+    "@types/node": "^22.14.0",
     "@types/vscode": "^1.97.0",
-    "@typescript-eslint/eslint-plugin": "^8.25.0",
-    "@typescript-eslint/parser": "^8.25.0",
+    "@typescript-eslint/eslint-plugin": "^8.29.0",
+    "@typescript-eslint/parser": "^8.29.0",
     "@vscode/test-cli": "^0.0.10",
     "@vscode/test-electron": "^2.4.1",
-    "eslint": "^9.21.0",
+    "eslint": "^9.23.0",
     "ts-loader": "^9.5.2",
     "typescript": "^5.8.2",
     "webpack": "^5.98.0",
