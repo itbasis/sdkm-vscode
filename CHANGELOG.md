@@ -1,5 +1,10 @@
 # Change Log
 
+## [0.1.2]
+
+- Added GOBIN entry to settings
+- Updated dependency versions
+
 ## [0.1.1]
 
 - Added update of settings when editing `go.mod` and `go.work`
